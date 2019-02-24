@@ -8,10 +8,13 @@ Based on https://github.com/stjohnjohnson/stunning-potato
 
 1. Install Homebrew
 2. Restore files from backup
+    1. Open Resilio Sync
+    2. Configure it
+    3. Start Sync, once sync is done you can proceed to restore settings
 3. Restore local settings
 4. Install software
 5. Setup OSX settings
-7. Reboot
+6. Reboot
 
 ## Usage
 

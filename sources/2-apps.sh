@@ -74,8 +74,6 @@ brew bundle --file=- <<EOF
 EOF
 
 brew cleanup
-brew cask cleanup
-brew prune
 
 pinfo "Installing Helmfile"
 curl -sL https://api.github.com/repos/roboll/helmfile/releases/latest | jq -r '.assets[].browser_download_url' | grep darwin_amd64 | wget -qi -
