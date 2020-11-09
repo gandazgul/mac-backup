@@ -4,7 +4,7 @@ pinfo "Installing Required Packages"
 brew bundle --file=- <<EOF
     tap "homebrew/bundle"
     tap "homebrew/core"
-    tap "caskroom/versions" # Alternate versions of software
+    tap "homebrew/cask-versions" # Alternate versions of software
     #tap "caskroom/fonts"    # Powerline fonts
 
     # Backup
@@ -37,6 +37,7 @@ brew bundle --file=- <<EOF
     # Editors
     # brew 'nano'
     # brew 'vim'            # When you really need it
+    cask 'visual-studio-code' # Best quick editor
 
     # Development
     cask 'docker'          # Doing things in containers
@@ -48,7 +49,7 @@ brew bundle --file=- <<EOF
     cask 'gas-mask'        # manage hosts files
     cask 'jetbrains-toolbox'
     cask 'postman'         # RESTful calls
-    cask 'etcher'          # For restoring usb flash images
+    cask 'balenaetcher'          # For restoring usb flash images
     cask 'tunnelblick'
     brew 'jsonnet'         # Making JSON easier??
     brew 'node'
@@ -70,7 +71,7 @@ brew bundle --file=- <<EOF
     # Apple Store Apps
     brew 'mas'
     mas 'Magnet', id: 441258766
-    mas 'Microsoft Remote Desktop 10', id: 1295203466
+    mas 'Microsoft Remote Desktop', id: 1295203466
 EOF
 
 brew cleanup
