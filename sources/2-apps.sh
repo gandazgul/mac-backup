@@ -16,13 +16,13 @@ brew bundle --file=- <<EOF
     brew 'lastpass-cli'   # Accessing secrets
     brew 'zsh'            # Not bash
 
-    #brew 'coreutils'      # All those cool GNU things
+    brew 'coreutils'      # All those cool GNU things
     brew 'git'            # Collaborating
     brew 'tree'           #
     brew 'rename'         # Sometimes you just gotta change a whole bunch of files
     brew 'watch'          # Who watches the watchmen
     brew 'curl'           # To access things off the "World Wide Web"
-    #brew 'nmap'           # Are you there?
+    brew 'nmap'           # Are you there?
     brew 'wget'           # When cURL just won't do
     brew 'tldr'           # Quick lookup of stuff
     brew 'jq'             # to work with json from the terminal
@@ -35,14 +35,11 @@ brew bundle --file=- <<EOF
     cask 'discord'        # To chat while gaming
 
     # Editors
-    # brew 'nano'
-    # brew 'vim'            # When you really need it
     cask 'visual-studio-code' # Best quick editor
 
     # Development
     cask 'docker'          # Doing things in containers
     cask 'virtualbox'      # Doing things in VMs
-    #brew 'hub'            # Github CLI and shortcuts
     brew 'kubernetes-cli'  # Kubernetes
     brew 'kubernetes-helm' # Kubernetes
     cask 'kubernetic'      # Kubernetes
@@ -53,8 +50,11 @@ brew bundle --file=- <<EOF
     cask 'tunnelblick'
     brew 'jsonnet'         # Making JSON easier??
     brew 'node'
+    brew 'nvm'
     brew 'yarn'
     brew 'go'
+    brew 'helmfile'
+    brew 'google-cloud-sdk'
 
     # Productivity
     cask 'iterm2'          # Doing things on a terminal
@@ -68,6 +68,9 @@ brew bundle --file=- <<EOF
     # Gaming
     cask 'steam'          # So I can play games
 
+    # Pretty
+    cask 'aerial' # best screensaver
+
     # Apple Store Apps
     brew 'mas'
     mas 'Magnet', id: 441258766
@@ -76,7 +79,4 @@ EOF
 
 brew cleanup
 
-pinfo "Installing Helmfile"
-curl -sL https://api.github.com/repos/roboll/helmfile/releases/latest | jq -r '.assets[].browser_download_url' | grep darwin_amd64 | wget -qi -
-chmod +x helmfile_darwin_amd64
-mv helmfile_darwin_amd64 /usr/local/bin/helmfile
+mkdir ~/.nvm

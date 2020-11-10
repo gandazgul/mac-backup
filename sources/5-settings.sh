@@ -30,8 +30,15 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 pnotice "Disable the “Are you sure you want to open this application?” dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
 pnotice "Disable the crash reporter"
 defaults write com.apple.CrashReporter DialogType -string "none"
+
+# Always show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+# Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 pnotice "Disable Notification Center and remove the menu bar icon"
 # this wasnt working on Mojave
