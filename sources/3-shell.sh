@@ -2,7 +2,10 @@
 
 if [ ! -d ~/.zprezto ]; then
     pinfo "Installing Prezto"
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "~/.zprezto"
+    pushd .
+    cd ~
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git .zprezto
+    popd
     chsh -s /bin/zsh
 else
     pnotice "Prezto already installed"
