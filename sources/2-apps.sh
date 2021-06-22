@@ -71,7 +71,7 @@ brew bundle --file=- <<EOF
     brew "nginx"           # Reverse proxy
     
     # The CLOUUUUD!!!
-    brew 'google-cloud-sdk' # google
+    cask 'google-cloud-sdk' # google
     brew 'awscli'           # aws
 
     # Productivity
