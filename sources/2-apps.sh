@@ -9,6 +9,7 @@ brew bundle --file=- <<EOF
     # tap "homebrew/cask-versions"
     # tap "homebrew/core"
     # tap "homebrew/services"
+    tap "fluxcd/tap" # fpr flux the gitops engine
     tap "tomanthony/brews" # tap fpr itermocil
     tap "homebrew/command-not-found" # https://github.com/Homebrew/homebrew-command-not-found when a command is not found, search brew for the formula
     tap "rs/tap"
