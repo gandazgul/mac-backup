@@ -44,6 +44,7 @@ brew bundle --file=- <<EOF
     # Communication
     cask 'whatsapp'       # To see everyone's group chats
     cask 'discord'        # To chat while gaming
+    brew 'android-messages' # texting from the laptop!
 
     # Editors
     cask 'visual-studio-code' # Best quick editor
