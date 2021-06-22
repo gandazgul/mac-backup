@@ -57,7 +57,7 @@ brew bundle --file=- <<EOF
     brew "kustomize"       # kubernetes yaml helper
     brew 'helmfile'        # Kubernetes helm automation
     brew 'fluxcd/tap/flux' # GitOps engine
-    cask 'octant'          # Kubernetes dashboard
+    brew 'octant'          # Kubernetes dashboard
     cask 'gas-mask'        # manage hosts files
     cask 'jetbrains-toolbox' # Develop with pleasure
     cask 'postman'         # RESTful calls
