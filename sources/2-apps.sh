@@ -10,7 +10,7 @@ brew bundle --file=- <<EOF
     # tap "homebrew/core"
     # tap "homebrew/services"
     tap "fluxcd/tap" # fpr flux the gitops engine
-    tap "tomanthony/brews" # tap fpr itermocil
+    #tap "tomanthony/brews" # tap fpr itermocil
     tap "homebrew/command-not-found" # https://github.com/Homebrew/homebrew-command-not-found when a command is not found, search brew for the formula
     tap "rs/tap"
 
@@ -23,7 +23,7 @@ brew bundle --file=- <<EOF
     cask 'iterm2'         # Doing things on a terminal
     brew 'bash'           # macos version is different
     brew 'zsh'            # Not bash
-    brew 'TomAnthony/brews/itermocil' # iTerm2 layouts
+    #brew 'TomAnthony/brews/itermocil' # iTerm2 layouts
 
     # Generally useful things
     brew 'coreutils'      # All those cool GNU things
