@@ -43,9 +43,9 @@ mkdir -p ~/.bin ~/Sites
 
 source ./sources/1-homebrew.sh
 source ./sources/2-apps.sh
-source ./sources/3-shell.sh
+# source ./sources/3-shell.sh
 source ./sources/4-backup.sh
-source ./sources/5-settings.sh
+# source ./sources/5-settings.sh
 
 pinfo "Finished restore process"
 pwarn "Reboot required!"
