@@ -9,4 +9,4 @@ else
 fi
 
 pnotice "Verifying the Homebrew installation"
-brew doctor
+#brew doctor

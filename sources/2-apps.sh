@@ -3,7 +3,6 @@
 pinfo "Installing Required Packages"
 brew bundle --file=- <<EOF
     tap "fluxcd/tap" # fpr flux the gitops engine
-    tap "homebrew/command-not-found" # https://github.com/Homebrew/homebrew-command-not-found when a command is not found, search brew for the formula
     tap "rs/tap"
 
     # Backup
@@ -36,7 +35,6 @@ brew bundle --file=- <<EOF
 
     # Communication
     cask 'whatsapp'       # To see everyone's group chats
-    brew 'android-messages' # texting from the laptop!
 
     # Editors
     cask 'visual-studio-code' # Best quick editor
@@ -50,7 +48,6 @@ brew bundle --file=- <<EOF
     brew "kubectx"       # change context easier
     brew "kustomize"       # kubernetes yaml helper
     brew 'fluxcd/tap/flux' # GitOps engine
-    brew 'k8sgpt'         # AI for k8s
     brew 'kubeseal'       # Sealed secrets
     cask 'gas-mask'        # manage hosts files
     cask 'jetbrains-toolbox' # Develop with pleasure
@@ -62,17 +59,12 @@ brew bundle --file=- <<EOF
     brew 'go'              # Not Javascript also Not c++ :)
     brew 'go-task'         # Task runner
     brew 'golangci-lint'   # Go linting
-    brew 'python@3.12'     # Python
-    brew 'pyenv'           # Python versions
-    brew 'pipx'            # Python apps
-    brew 'terraform'       # IaC
-    brew 'pulumi'          # IaC
-    brew 'ollama'          # Local LLMs
     brew 'gh'              # GitHub CLI
-    brew 'glab'            # GitLab CLI
     brew 'gitup'           # Git helper
-    cask 'google-cloud-sdk' # google
-    brew 'awscli'           # aws
+    brew 'uv'              # python
+    brew 'lm-studio'        # Local LLMs for development
+    brew 'antigravity'     # AI pair programmer
+    brew 'gemini-cli'      # Gemini AI from Google
 
     # Productivity
     cask 'google-chrome'   # Browsing the web
@@ -101,4 +93,5 @@ EOF
 brew cleanup
 
 # NVM requires this directory
-mkdir ~/.nvm
+mkdir -p ~/.nvm
+nvm install --lts

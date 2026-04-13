@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+source ./utils.sh
+
 if [ ! -d ~/.zprezto ]; then
     pinfo "Installing Prezto"
     pushd .

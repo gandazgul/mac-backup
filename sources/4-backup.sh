@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+source ./utils.sh
+
 pwarn "Please setup Resilio Sync and start syncing"
 open /Applications/Resilio\ Sync.app
 

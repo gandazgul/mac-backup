@@ -7,29 +7,7 @@ if [[ "$1" != "--logged" ]]; then
   exit
 fi
 
-pinfo() {
-  pecho ✅ $@
-}
-
-pwarn() {
-  pecho 🔥 $@
-}
-
-pnotice() {
-  pecho 💡 $@
-}
-
-pecho() {
-  local icon="$1"; shift
-  local date=`date`
-
-  echo -e "${date}\t$icon  $@"
-}
-
-prompt() {
-  pecho 🚧 "Press any key to continue"
-  read -n 1 -s
-}
+source ./utils.sh
 
 pinfo "Starting restore process"
 
@@ -43,7 +21,7 @@ mkdir -p ~/.bin ~/Sites
 
 source ./sources/1-homebrew.sh
 source ./sources/2-apps.sh
-# source ./sources/3-shell.sh
+source ./sources/3-shell.sh
 source ./sources/4-backup.sh
 # source ./sources/5-settings.sh
 
