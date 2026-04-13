@@ -8,13 +8,15 @@ brew bundle --file=- <<EOF
 
     # Backup
     cask 'resilio-sync'
-    cask 'google-backup-and-sync'
     brew 'mackup'         # App configuration service
 
     # Shell Stuff
-    cask 'warp'           # Doing things on a terminal
     brew 'bash'           # macos version is different
     brew 'zsh'            # Not bash
+    brew 'fzf'
+    brew 'fd'
+    brew 'ripgrep'
+    brew 'bat'
 
     # Generally useful things
     brew 'coreutils'      # All those cool GNU things
@@ -24,9 +26,9 @@ brew bundle --file=- <<EOF
     brew 'curl'           # To access things off the "World Wide Web"
     brew 'nmap'           # Are you there?
     brew 'wget'           # When cURL just won't do
-    brew 'tldr'           # Quick lookup of stuff
     brew 'jq'             # to work with json from the terminal
     brew 'htop'           # Better than top
+    brew 'btop'           # Even better than htop
     brew 'sshuttle'       # Phone home
     brew 'telnet'         # Handy sometimes
     brew "rs/tap/jaggr"   # Json aggregator
@@ -34,51 +36,59 @@ brew bundle --file=- <<EOF
 
     # Communication
     cask 'whatsapp'       # To see everyone's group chats
-    cask 'discord'        # To chat while gaming
     brew 'android-messages' # texting from the laptop!
 
     # Editors
     cask 'visual-studio-code' # Best quick editor
+    cask 'obsidian'       # Knowledge base
 
     # Development
-    # cask 'docker'          # Doing things in containers
-    cask 'rancher' # Container manager
-    cask 'virtualbox'      # Doing things in VMs # not compatible with Apple Silicon :scream:
+    cask 'podman-desktop' # Container manager
+    brew 'podman'
     brew 'kubernetes-cli'  # Kubernetes
-    brew 'kubernetes-helm' # Helm: the package manager for k8s
-    brew "kubectx"         # change context easier
+    brew 'helm'           # Helm: the package manager for k8s
+    brew "kubectx"       # change context easier
     brew "kustomize"       # kubernetes yaml helper
-    # brew 'helmfile'        # Kubernetes helm automation
     brew 'fluxcd/tap/flux' # GitOps engine
-    brew 'octant'          # Kubernetes dashboard
+    brew 'k8sgpt'         # AI for k8s
+    brew 'kubeseal'       # Sealed secrets
     cask 'gas-mask'        # manage hosts files
     cask 'jetbrains-toolbox' # Develop with pleasure
     cask 'postman'         # RESTful calls
     brew 'vegeta'          # Its over 9000!!!!!! Load testing tool
-    cask 'balenaetcher'    # For making usb flash from images
     brew 'nvm'             # Javascript
+    brew 'pnpm'            # Javascript deps
     brew 'yarn'            # Javascript deps
     brew 'go'              # Not Javascript also Not c++ :)
-    # brew "nginx"           # Reverse proxy
-    
-    # The CLOUUUUD!!!
+    brew 'go-task'         # Task runner
+    brew 'golangci-lint'   # Go linting
+    brew 'python@3.12'     # Python
+    brew 'pyenv'           # Python versions
+    brew 'pipx'            # Python apps
+    brew 'terraform'       # IaC
+    brew 'pulumi'          # IaC
+    brew 'ollama'          # Local LLMs
+    brew 'gh'              # GitHub CLI
+    brew 'glab'            # GitLab CLI
+    brew 'gitup'           # Git helper
     cask 'google-cloud-sdk' # google
     brew 'awscli'           # aws
 
     # Productivity
-    cask 'vlc'             # Watching movies
     cask 'google-chrome'   # Browsing the web
     cask 'firefox'         # Browsing the web
     cask "microsoft-edge"  # Browsing the web
     brew 'screen'          # Just in case
-    cask "recordit"        # Screen recordings
     cask "the-unarchiver"  # Uncompress anything
+    cask 'appcleaner'      # Uninstall cleaner
+    cask 'freelens'        # Lens for mac
+    cask 'tabby'           # Terminal emulator
+
+    # Design
+    cask 'gimp'            # Image editor
 
     # Gaming
-    cask 'steam'          # So I can play games
-
-    # Pretty
-    # cask 'aerial' # best screensaver # osx has it installed now
+    # cask 'steam'          # So I can play games
 
     # Apple Store Apps
     brew 'mas'
